@@ -49,9 +49,11 @@ spec:
               subPath: "hooks.yaml"
           {{ range $key, $hook := .Values.hooks }}
             {{ range $name, $val := $hook.files }}
+            {{ if $hook.enable }}
             - name: configs
-              mountPath: {{ $name | quote }}
-              subPath: "file_{{ $name | replace "/" "_" }}"
+              mountPath: {{ $name | replace "%" "." | quote }}
+              subPath: "file_{{ $name | replace "/" "_" | replace "%" "." }}"
+            {{ end }}
             {{ end }}
           {{ end }}
           resources:
