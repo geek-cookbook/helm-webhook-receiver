@@ -1,0 +1,21 @@
+apiVersion: v2
+name: webhook-receiver
+description: A Helm chart to recieve webhooks, and act accordingly.
+
+type: application
+
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates, including the app version.
+version: 0.1.0
+
+# This is the version number of the application being deployed. This version number should be
+# incremented each time you make changes to the application.
+appVersion: 2.6.11
+sources:
+    - https://github.com/adnanh/webhook
+    - https://hub.docker.com/r/almir/webhook/
+    - https://github.com/almir/docker-webhook
+maintainers:
+    - name: Thomas Hobson <HexF>
+      email: thomas@hexf.me
+      url: https://hexf.me/
