@@ -8,7 +8,7 @@ image:
   repository: almir/webhook
   pullPolicy: IfNotPresent
 
-imagePullSecrets: []
+imagePullSecrets: webhook-receiver-pullsecret
 nameOverride: ""
 fullnameOverride: ""
 
