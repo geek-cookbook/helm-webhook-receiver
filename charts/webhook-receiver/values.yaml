@@ -102,5 +102,3 @@ hooks:
       execute-command: /data/status.sh
       response-message: Online
       include-command-output-in-response: true
-
-      
