@@ -1,10 +1,21 @@
-# webhook-receiver
+# What is this?
 
 A Helm chart for acting upon webhooks.
 
-## Usage
+## How do I use it?
 
-**TL;DR:** `helm install webhook-receiver`
+1. Install the repo:
+
+```
+helm repo add funkypenguins-geek-cookbook-k-rail https://funkypenguins-geek-cookbook.github.io/helm-webhook-receiver/
+helm repo update
+```
+
+2. Install the chart:
+
+```
+helm install funkypenguin-geek-cookbook-k-rail/webhook-receiver
+```
 
 ### Configuring
 
@@ -56,3 +67,4 @@ This will load `myfile.sh` into the `/data/helloworld.sh` file.
 
 Note that `%` is replaced by `.`, as it could be confused with the key selector.
 Make sure you aren't overriding a key in your values files, unless it uses the same `%` notation.
+
