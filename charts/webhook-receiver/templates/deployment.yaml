@@ -62,7 +62,7 @@ spec:
         - name: configs
           configMap:
             name: {{ include "webhook-receiver.fullname" $ }}
-            defaultMode: 0744
+            defaultMode: 0755
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
