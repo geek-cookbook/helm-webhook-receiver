@@ -6,6 +6,7 @@ replicaCount: 1
 
 image:
   repository: almir/webhook
+  tag: 2.7.0
   pullPolicy: IfNotPresent
 
 imagePullSecrets: webhook-receiver-pullsecret

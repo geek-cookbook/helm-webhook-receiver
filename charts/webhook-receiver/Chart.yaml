@@ -6,11 +6,11 @@ type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
 # to the chart and its templates, including the app version.
-version: 1.0.1-pre2
+version: 1.0.1-pre3
 
 # This is the version number of the application being deployed. This version number should be
 # incremented each time you make changes to the application.
-appVersion: 2.6.11
+appVersion: 2.7.0
 sources:
     - https://github.com/adnanh/webhook
     - https://hub.docker.com/r/almir/webhook/
@@ -19,5 +19,8 @@ maintainers:
     - name: Thomas Hobson <HexF>
       email: thomas@hexf.me
       url: https://hexf.me/
+    - name: David Young
+      email: davidy@funkypenguin.co.nz
+      url: https://www.funkypenguin.co.nz 
 
 home: https://geek-cookbook.funkypenguin.co.nz
