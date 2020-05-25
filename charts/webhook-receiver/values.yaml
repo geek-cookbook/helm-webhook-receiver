@@ -9,9 +9,8 @@ image:
   tag: 2.7.0
   pullPolicy: IfNotPresent
 
-imagePullSecrets: 
-  - webhook-receiver-pullsecret
-  
+imagePullSecrets: webhook-receiver-pullsecret
+
 nameOverride: ""
 fullnameOverride: ""
 
