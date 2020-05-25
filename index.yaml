@@ -3,6 +3,28 @@ entries:
   webhook-receiver:
   - apiVersion: v2
     appVersion: 2.7.0
+    created: "2020-05-25T10:39:20.203936828Z"
+    description: A Helm chart to recieve webhooks, and act accordingly.
+    digest: 9a873eb2318f8b5410be502af8e3bcfac5c592eb9c7febec7052f269a2410ceb
+    home: https://geek-cookbook.funkypenguin.co.nz
+    maintainers:
+    - email: thomas@hexf.me
+      name: Thomas Hobson <HexF>
+      url: https://hexf.me/
+    - email: davidy@funkypenguin.co.nz
+      name: David Young
+      url: https://www.funkypenguin.co.nz
+    name: webhook-receiver
+    sources:
+    - https://github.com/adnanh/webhook
+    - https://hub.docker.com/r/almir/webhook/
+    - https://github.com/almir/docker-webhook
+    type: application
+    urls:
+    - https://github.com/geek-cookbook/helm-webhook-receiver/releases/download/webhook-receiver-1.0.2/webhook-receiver-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 2.7.0
     created: "2020-05-25T08:45:09.824571334Z"
     description: A Helm chart to recieve webhooks, and act accordingly.
     digest: 51f4c8f468ae7159e49a8995d97dddd770ed982f02e8d0af25ffca614aaa42d2
