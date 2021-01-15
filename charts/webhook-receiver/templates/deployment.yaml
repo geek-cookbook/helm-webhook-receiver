@@ -18,7 +18,7 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       imagePullSecrets:
-      - name: {{ .Values.imagePullSecret }}        
+      - name: {{ .Values.imagePullSecret }}
       containers:
         - name: {{ .Chart.Name }}
           args:
@@ -34,7 +34,7 @@ spec:
           {{- range $pkey, $pval := .Values.env }}
           - name: {{ $pkey }}
             value: {{ quote $pval }}
-          {{- end }}          
+          {{- end }}
           ports:
             - name: http
               containerPort: 9000
@@ -51,15 +51,15 @@ spec:
             - name: configs
               mountPath: "/etc/webhook/hooks.yaml"
               subPath: "hooks.yaml"
-          {{ range $key, $hook := .Values.hooks }}
-            {{ range $name, $val := $hook.files }}
-            {{ if $hook.enable }}
+          {{- range $key, $hook := .Values.hooks }}
+            {{- range $name, $val := $hook.files }}
+            {{- if $hook.enable }}
             - name: configs
               mountPath: {{ $name | replace "%" "." | quote }}
               subPath: "file_{{ $name | replace "/" "_" | replace "%" "." }}"
-            {{ end }}
-            {{ end }}
-          {{ end }}
+            {{- end }}
+            {{- end }}
+          {{- end }}
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       volumes:

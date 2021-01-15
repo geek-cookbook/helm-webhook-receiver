@@ -6,7 +6,7 @@ replicaCount: 1
 
 image:
   repository: almir/webhook
-  tag: 2.7.0
+  tag: 2.8.0
   pullPolicy: IfNotPresent
 
 imagePullSecret: webhook-receiver-pullsecret
@@ -45,7 +45,7 @@ ingress:
     # kubernetes.io/tls-acme: "true"
   hosts:
     - host: webhook-receiver.chart.local
-      paths: 
+      paths:
         - /
   tls: []
   #  - secretName: chart-example-tls
@@ -71,7 +71,7 @@ tolerations: []
 affinity: {}
 
 # Use this to insert env values into the deployment
-env: []
+env: {}
 
 hooks:
   webhook1:

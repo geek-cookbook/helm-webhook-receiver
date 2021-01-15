@@ -7,12 +7,12 @@ metadata:
 data:
   hooks.yaml: | {{- range $key, $val := .Values.hooks }}
     - {{ $val.hook | toYaml | indent 6 | trim }}
-  {{ end -}}
+  {{- end }}
   {{- range $key, $hook := .Values.hooks }}
     {{- range $name, $val := $hook.files }}
-      {{ if $hook.enable }}
+      {{- if $hook.enable }}
   file_{{ $name | replace "/" "_" | replace "%" "." }}: |
 {{ $val | indent 8 }}
-      {{ end }}
-    {{ end -}}
-  {{ end -}}
+      {{- end }}
+    {{- end }}
+  {{- end }}
