@@ -71,7 +71,7 @@ tolerations: []
 affinity: {}
 
 # Use this to insert env values into the deployment
-env: []
+env: {}
 
 hooks:
   webhook1:
