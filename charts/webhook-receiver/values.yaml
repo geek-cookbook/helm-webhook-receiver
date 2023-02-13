@@ -69,14 +69,20 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
-livenessProbe:
-  httpGet:
-    path: /hooks/status
-    port: http
-readinessProbe:
-  httpGet:
-    path: /hooks/status
-    port: http
+livenessProbe: {}
+# You should use only one of these two options
+#  httpGet:
+#    path: /hooks/status
+#    port: http
+#  tcpSocket:
+#    port: http
+readinessProbe: {}
+# You should use only one of these two options
+#  httpGet:
+#    path: /hooks/status
+#    port: http
+#  tcpSocket:
+#    port: http
 
 nodeSelector: {}
 
