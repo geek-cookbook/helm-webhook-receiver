@@ -86,6 +86,14 @@ affinity: {}
 
 # Use this to insert env values into the deployment
 env: {}
+# Additional environment variables mapped from Secret or ConfigMap
+extraEnvFrom: ""
+# - name: CMD_USER
+#   valueFrom:
+#     secretKeyRef:
+#       name: command-creds
+#       key: username
+
 
 hooks:
   webhook1:
