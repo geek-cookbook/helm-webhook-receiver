@@ -39,6 +39,10 @@ spec:
           - name: {{ $pkey }}
             value: {{ quote $pval }}
           {{- end }}
+          envFrom:
+            {{- with .Values.extraEnvFrom }}
+            {{- tpl . $ | nindent 12 }}
+            {{- end }}
           ports:
             - name: http
               containerPort: 9000
